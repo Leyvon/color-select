@@ -1,4 +1,5 @@
 import React from "react";
+import CustomColorPicker from "./CustomColorPicker";
 import "./DropdownPanel.css";
 
 const DropdownPanel = ({ isOpen, handleClose }) => {
@@ -7,8 +8,10 @@ const DropdownPanel = ({ isOpen, handleClose }) => {
       className={`popover ${isOpen ? "popover_opened" : ""}`}
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="cover" onClick={handleClose} />
-      <div className="panel">ПАНЕЛЬКА</div>
+      {/* <div className="cover" onClick={handleClose} /> */}
+      <div className="panel">
+        <CustomColorPicker />
+      </div>
     </div>
   );
 };

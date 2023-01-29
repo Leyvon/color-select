@@ -1,0 +1,16 @@
+.color-picker {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.line {
+  margin: 12px 0;
+  width: 90%;
+  border-bottom: 1px solid #c2c2c2;
+}
