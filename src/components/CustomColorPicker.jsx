@@ -5,6 +5,7 @@ import "./CustomColorPicker.css";
 import { colorList } from "../utils/colorList";
 import SwatchColorSquares from "./SwatchColorSquares";
 import ButtonBar from "./ButtonBar";
+import Main from "./Main";
 
 const CustomColorPicker = ({ onClose, color, onChange }) => {
   const [hex, setHex] = useState(color);
@@ -18,7 +19,7 @@ const CustomColorPicker = ({ onClose, color, onChange }) => {
 
       <div className="line"></div>
 
-      <div>middle-container</div>
+      <Main hexCode={hex} onChange={onChange} />
 
       <ButtonBar onClose={onClose} hex={hex} />
     </div>
