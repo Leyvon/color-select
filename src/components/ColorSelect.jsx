@@ -28,10 +28,6 @@ const ColorSelect = ({
     setHex(color);
   };
 
-  // useEffect(() => {
-
-  // }, []);
-
   return (
     <div>
       <div className="color-select" onClick={handleOpen}>
@@ -50,7 +46,12 @@ const ColorSelect = ({
           ${displayColorPicker ? "up active" : "down"}
         `}
         />
-        <DropdownPanel isOpen={displayColorPicker} handleClose={handleClose} />
+        <DropdownPanel
+          isOpen={displayColorPicker}
+          onClose={handleClose}
+          onChange={handleChange}
+          color={color}
+        />
       </div>
     </div>
   );

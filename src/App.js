@@ -3,7 +3,7 @@ import ColorSelect from "./components/ColorSelect";
 function App() {
   return (
     <div className="App">
-      <ColorSelect />
+      <ColorSelect value="#00ff00" />
     </div>
   );
 }

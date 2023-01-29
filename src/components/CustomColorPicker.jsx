@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CustomPicker } from "react-color";
 import "./CustomColorPicker.css";
-import SwatchColorSquares from "./SwatchColorSquares";
-import { colorList } from "../utils/colorList";
 
-const CustomColorPicker = () => {
+import { colorList } from "../utils/colorList";
+import SwatchColorSquares from "./SwatchColorSquares";
+import ButtonBar from "./ButtonBar";
+
+const CustomColorPicker = ({ onClose, color, onChange }) => {
+  const [hex, setHex] = useState(color);
+
   return (
     <div className="color-picker">
       <SwatchColorSquares
@@ -16,7 +20,7 @@ const CustomColorPicker = () => {
 
       <div>middle-container</div>
 
-      <div>last-container</div>
+      <ButtonBar onClose={onClose} hex={hex} />
     </div>
   );
 };
