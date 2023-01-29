@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import "./ColorSelect.css";
+import DropdownPanel from "./DropdownPanel";
 
 const ColorSelect = ({
   value = "#000000",
@@ -32,22 +33,25 @@ const ColorSelect = ({
   // }, []);
 
   return (
-    <div className="color-select" onClick={handleOpen}>
-      <div className="color-select__color-circle-container">
+    <div>
+      <div className="color-select" onClick={handleOpen}>
+        <div className="color-select__color-circle-container">
+          <div
+            className="color-select__color-circle"
+            style={{ backgroundColor: hex }}
+          />
+          <span className="color-select__color-circle-text">#</span>
+        </div>
+
+        <span className="color-select__hex-code">{hex.slice(1)}</span>
+
         <div
-          className="color-select__color-circle"
-          style={{ backgroundColor: hex }}
-        />
-        <span className="color-select__color-circle-text">#</span>
-      </div>
-
-      <span className="color-select__hex-code">{hex.slice(1)}</span>
-
-      <div
-        className={`color-select__label 
+          className={`color-select__label 
           ${displayColorPicker ? "up active" : "down"}
         `}
-      ></div>
+        />
+        <DropdownPanel isOpen={displayColorPicker} handleClose={handleClose} />
+      </div>
     </div>
   );
 };
