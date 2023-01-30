@@ -30,7 +30,6 @@
 }
 
 .color-select__color-circle {
-  /* -webkit-appearance: none; */
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -38,7 +37,6 @@
   margin: 0;
   box-sizing: border-box;
   overflow: hidden;
-  outline-color: currentColor;
   cursor: pointer;
   background: #000;
 }
