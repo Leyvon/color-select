@@ -1,4 +1,4 @@
-import ColorSelect from "./components/ColorSelect";
+import ColorSelect from "./components/ColorSelect/ColorSelect";
 
 function App() {
   return (
