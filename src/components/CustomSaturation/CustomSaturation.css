@@ -1,0 +1,17 @@
+.saturation {
+  width: 400px;
+  padding-bottom: 80%;
+  position: relative;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.pointer {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(1px, -13px);
+  /* transform: translate(7px, -20px); */
+  background: none;
+  border: 1px solid #f8f8f8;
+}
